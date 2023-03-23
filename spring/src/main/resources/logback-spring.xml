@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--
+        Оригинал данного файла взят из jar файла org.springframework.boot:spring-boot
+        по пути org/springframework/boot/logging/logback/base.xml
+        Смотри так же:
+        https://docs.spring.io/spring-boot/docs/1.5.x/reference/html/howto-logging.html#howto-configure-logback-for-logging-fileonly
+
+        Данный конфиг используется только при локальной разработке чтобы логи писались только в консоль.
+        Для этого в ходе локальных тестов необходимо запускать main класс из папки test.
+    -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/spring.log}"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

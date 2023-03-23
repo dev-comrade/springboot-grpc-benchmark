@@ -1,0 +1,4 @@
+grpc:
+  server:
+    port: 61004
+    shutdown-grace-period: 10s

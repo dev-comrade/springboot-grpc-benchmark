@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package comrade.test.proto;
+option java_multiple_files = true;
+
+service Comrade {
+  rpc isComrade (ComradeRequest) returns (ComradeResponse) {}
+}
+
+// Объект запроса.
+message ComradeRequest {
+  string name = 1;
+}
+
+// Объект ответа.
+message ComradeResponse {
+  string comradeInfo = 2;
+}
