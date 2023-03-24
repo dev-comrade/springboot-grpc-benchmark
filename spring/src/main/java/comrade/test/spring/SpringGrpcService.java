@@ -3,13 +3,13 @@ package comrade.test.spring;
 import comrade.test.proto.ComradeRequest;
 import comrade.test.proto.ComradeResponse;
 import comrade.test.proto.ReactorComradeGrpc;
-import net.devh.boot.grpc.server.service.GrpcService;
+import org.lognet.springboot.grpc.GRpcService;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.Random;
 
-@GrpcService
+@GRpcService
 public class SpringGrpcService extends ReactorComradeGrpc.ComradeImplBase {
     private final Random ran;
     private final List<String> results = List.of("are", "aren't");
