@@ -11,6 +11,7 @@ How to run
 
 1) start grpc servers from [VanillaServiceLauncher.java](vanilla%2Fsrc%2Fmain%2Fjava%2Fcomrade%2Ftest%2Fvanilla%2FVanillaServiceLauncher.java) or/and [SpringbootGrpcServer.java](spring%2Fsrc%2Fmain%2Fjava%2Fcomrade%2Ftest%2Fspring%2FSpringbootGrpcServer.java)
 2) start [behch.sh](behch.sh) with scope vanilla/spring ```./behch.sh vanilla```
+3) If you want to restrict benchmark by resources just put the second param ```./behch.sh vanilla 1```. In this case benchmark will start with use 1 cpu and 1 concurrency
 
 **My results:**
 
